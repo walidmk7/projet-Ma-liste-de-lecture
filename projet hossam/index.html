@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Liste de Lecture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>📚 Ma Liste de Lecture</h1>
+        <p>Bienvenue sur mon espace dédié aux livres. Suivez mes lectures en cours et mes coups de cœur.</p>
+    </header>
+
+    <main>
+
+        <!-- STATS -->
+        <div class="stats">
+            <div class="stat-item"><span>12</span> Livres lus</div>
+            <div class="stat-item"><span>3</span> En cours</div>
+            <div class="stat-item"><span>45</span> Objectif annuel</div>
+            <div class="stat-item"><span>8</span> Favoris</div>
+        </div>
+
+        <!-- FILTRES -->
+        <div class="filters">
+            <button class="active">Tous</button>
+            <button>Fiction</button>
+            <button>Science</button>
+            <button>Philosophie</button>
+            <button>Histoire</button>
+        </div>
+
+        <!-- SECTION : EN COURS -->
+        <section class="en-cours">
+            <h2>📖 Lectures en cours</h2>
+            <div class="book-grid">
+
+                <!-- Livre 1 -->
+                <div class="book-card card-philo">
+                    <div class="book-badge">🔖 En cours</div>
+                    <div class="book-content">
+                        <h3>L'Alchimiste</h3>
+                        <p class="author">Paulo Coelho</p>
+                        <p class="description">Un conte philosophique sur la poursuite de ses rêves et la légende personnelle.</p>
+                        <div class="page-counter">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%;"></div>
+                            </div>
+                            <span>Page 120 sur 185</span>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <!-- Livre 2 -->
+                <div class="book-card card-science">
+                    <div class="book-badge">🔖 En cours</div>
+                    <div class="book-content">
+                        <h3>Une brève histoire du temps</h3>
+                        <p class="author">Stephen Hawking</p>
+                        <p class="description">Un voyage fascinant à travers les mystères de l'univers et du cosmos.</p>
+                        <div class="page-counter">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%;"></div>
+                            </div>
+                            <span>Page 84 sur 212</span>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <!-- Livre 3 -->
+                <div class="book-card card-fiction">
+                    <div class="book-badge">🔖 En cours</div>
+                    <div class="book-content">
+                        <h3>Le Petit Prince</h3>
+                        <p class="author">Antoine de Saint-Exupéry</p>
+                        <p class="description">Un chef-d'œuvre poétique sur l'amitié, l'amour et le sens de la vie.</p>
+                        <div class="page-counter">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%;"></div>
+                            </div>
+                            <span>Page 72 sur 93</span>
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION : DÉJÀ LUS -->
+        <section class="deja-lus">
+            <h2>✅ Déjà lus</h2>
+            <div class="book-grid">
+
+                <!-- Livre 1 -->
+                <div class="book-card card-fiction">
+                    <div class="book-badge">✔ Lu</div>
+                    <div class="book-content">
+                        <h3>1984</h3>
+                        <p class="author">George Orwell</p>
+                        <p class="description">Une dystopie glaçante sur le totalitarisme et la surveillance de masse.</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <!-- Livre 2 -->
+                <div class="book-card card-philo">
+                    <div class="book-badge">✔ Lu</div>
+                    <div class="book-content">
+                        <h3>Ainsi parlait Zarathoustra</h3>
+                        <p class="author">Friedrich Nietzsche</p>
+                        <p class="description">La philosophie de Nietzsche à travers les discours du sage Zarathoustra.</p>
+                        <div class="rating">⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <!-- Livre 3 -->
+                <div class="book-card card-science">
+                    <div class="book-badge">✔ Lu</div>
+                    <div class="book-content">
+                        <h3>Sapiens</h3>
+                        <p class="author">Yuval Noah Harari</p>
+                        <p class="description">L'histoire de l'humanité depuis les premiers humains jusqu'à nos jours.</p>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+                <!-- Livre 4 -->
+                <div class="book-card card-histoire">
+                    <div class="book-badge">✔ Lu</div>
+                    <div class="book-content">
+                        <h3>Le Nom de la Rose</h3>
+                        <p class="author">Umberto Eco</p>
+                        <p class="description">Un roman policier médiéval riche en mystères et en érudition.</p>
+                        <div class="rating">⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION : LISTE DE SOUHAITS -->
+        <section class="a-lire">
+            <h2>🌟 Ma liste de souhaits</h2>
+            <div class="book-grid">
+
+                <!-- Livre 1 -->
+                <div class="book-card card-souhait">
+                    <div class="book-badge">📌 À lire</div>
+                    <div class="book-content">
+                        <h3>Dune</h3>
+                        <p class="author">Frank Herbert</p>
+                        <p class="description">Une épopée de science-fiction dans un univers désertique fascinant.</p>
+                        <div class="rating">🔖 Dans ma liste</div>
+                    </div>
+                </div>
+
+                <!-- Livre 2 -->
+                <div class="book-card card-souhait">
+                    <div class="book-badge">📌 À lire</div>
+                    <div class="book-content">
+                        <h3>Les Misérables</h3>
+                        <p class="author">Victor Hugo</p>
+                        <p class="description">Un roman monumental sur la justice, la rédemption et la société française.</p>
+                        <div class="rating">🔖 Dans ma liste</div>
+                    </div>
+                </div>
+
+                <!-- Livre 3 -->
+                <div class="book-card card-souhait">
+                    <div class="book-badge">📌 À lire</div>
+                    <div class="book-content">
+                        <h3>Atomic Habits</h3>
+                        <p class="author">James Clear</p>
+                        <p class="description">Comment de petites habitudes peuvent transformer radicalement votre vie.</p>
+                        <div class="rating">🔖 Dans ma liste</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>📚 Projet réalisé par HOUSSAM — 2024 | Ma Liste de Lecture</p>
+    </footer>
+
+</body>
+</html>
