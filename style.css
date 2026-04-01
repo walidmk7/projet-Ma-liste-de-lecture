@@ -1,0 +1,241 @@
+  /* 1. Variables CSS (Charte Graphique) */
+        :root {
+            --couleur-principale: #7C5C3A;
+            --couleur-secondaire: #A67C52;
+            --fond-page: #FAF7F2;
+            --surface-carte: #FFFFFF;
+            --texte-principal: #2C2416;
+            --texte-secondaire: #8A7A68;
+        }
+
+        /* 2. Style de base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--fond-page);
+            color: var(--texte-principal);
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+            color: var(--couleur-principale);
+        }
+
+        /* 3. Header */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--couleur-secondaire);
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--texte-secondaire);
+        }
+
+        /* 4. Barre de statistiques */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: var(--surface-carte);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+            font-weight: bold;
+            color: var(--texte-secondaire);
+        }
+
+        .stat-item span {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--couleur-principale);
+        }
+
+        /* 5. Filtres */
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filters button {
+            background-color: transparent;
+            border: 2px solid var(--couleur-secondaire);
+            color: var(--couleur-secondaire);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .filters button:hover,
+        .filters button.active {
+            background-color: var(--couleur-principale);
+            color: white;
+            border-color: var(--couleur-principale);
+        }
+
+        /* 6. Sections */
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            border-left: 4px solid var(--couleur-principale);
+            padding-left: 12px;
+        }
+
+        /* 7. Grille de livres */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* 8. Carte de livre */
+        .book-card {
+            background-color: var(--surface-carte);
+            border: 1px solid #E0D7CC;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: var(--couleur-principale);
+        }
+
+        /* Couleurs latérales par genre */
+        .card-fiction  { border-left: 5px solid #e74c3c; }
+        .card-science  { border-left: 5px solid #3498db; }
+        .card-philo    { border-left: 5px solid #9b59b6; }
+        .card-histoire { border-left: 5px solid #e67e22; }
+        .card-souhait  { border-left: 5px solid #2ecc71; }
+
+        /* Badge */
+        .book-badge {
+            background-color: var(--couleur-principale);
+            color: white;
+            padding: 5px 12px;
+            font-size: 0.8rem;
+            display: inline-block;
+            border-radius: 0 0 10px 0;
+        }
+
+        .book-content {
+            padding: 20px;
+        }
+
+        .book-content h3 {
+            margin: 10px 0 5px 0;
+            font-size: 1.2rem;
+        }
+
+        .author {
+            color: var(--couleur-secondaire);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: var(--texte-secondaire);
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            font-size: 1rem;
+        }
+
+        /* 9. Progress bar */
+        .page-counter {
+            margin: 15px 0;
+        }
+
+        .progress-bar {
+            background-color: #E0D7CC;
+            height: 8px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background-color: var(--couleur-principale);
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .page-counter span {
+            font-size: 0.8rem;
+            color: var(--texte-secondaire);
+        }
+
+        /* 10. Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #E0D7CC;
+            font-size: 0.9rem;
+            color: var(--texte-secondaire);
+        }
+
+        /* 11. Responsive Design (Mobile) */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .stat-item {
+                border-bottom: 1px dashed var(--couleur-secondaire);
+                padding-bottom: 10px;
+            }
+
+            .stat-item:last-child {
+                border-bottom: none;
+            }
+
+            .book-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filters {
+                justify-content: center;
+            }
+        }
